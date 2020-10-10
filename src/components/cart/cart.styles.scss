@@ -1,0 +1,54 @@
+.cart {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.cart-header {
+    border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.cart-items {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+
+    & li {
+        display: flex;
+
+        & div {
+            padding: 0.5rem;
+
+            &:last-child {
+                flex: 1;
+            }
+            & .right {
+                text-align: right;
+            }
+
+            & button {
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+
+    & img {
+        width: 5rem;
+    }
+}
+.total {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1;
+
+    & div {
+        font-size: 2rem;
+    }
+
+    & div,
+    & button {
+        flex: 1;
+    }
+}
