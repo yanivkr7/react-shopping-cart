@@ -3,7 +3,8 @@ import data from './data.json';
 import Products from './components/products/products.component';
 import Filter from './components/filter/filter.component';
 import Cart from './components/cart/cart.component';
-
+import store from './redux/store/store';
+import { Provider } from 'react-redux';
 //Feature 1
 class App extends Component {
   constructor(){
@@ -86,6 +87,7 @@ class App extends Component {
 
   render(){
   return (
+    <Provider store={store}>
     <div className="grid-container">
       <header>
         <a href='/'>React Shopping Cart</a>
@@ -108,6 +110,7 @@ class App extends Component {
       </main>
       <footer>All right is reserved.</footer>
     </div>
+    </Provider>
   )}
 }
 
